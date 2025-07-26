@@ -6,30 +6,61 @@
   <title>Letter to Hyemi</title>
   <style>
     body {
-      margin: 0; padding: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
       background: url('https://raw.githubusercontent.com/jaafarptgc/Hyemi/main/bgbg.jpg') no-repeat center center fixed;
       background-size: cover;
-      display: flex; justify-content: center; align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       min-height: 100vh;
       color: #333;
     }
+
     .scroll {
-      width: 80%; max-width: 600px; height: 90vh;
-      padding: 60px 40px; overflow-y: auto;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      background-color: rgba(255,255,255,0.5); /* more transparent */
+      width: 90%;
+      max-width: 600px;
+      max-height: 90vh;
+      padding: 40px 24px;
+      overflow-y: auto;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      background-color: rgba(255, 255, 255, 0.8); /* clearer background for readability */
       border-radius: 20px;
+      backdrop-filter: blur(6px);
     }
+
     h1 {
-      text-align: center; color: #d14a8c; margin-bottom: 20px;
+      text-align: center;
+      color: #d14a8c;
+      font-size: 1.8em;
+      margin-bottom: 20px;
     }
+
     p {
-      line-height: 1.6; font-size: 1.1em; color: #4d2c4f; white-space: pre-wrap;
+      line-height: 1.7;
+      font-size: 1.05em;
+      color: #4d2c4f;
+      white-space: pre-wrap;
       margin: 0;
     }
+
     audio {
       display: none;
+    }
+
+    @media (max-width: 500px) {
+      .scroll {
+        padding: 30px 18px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
