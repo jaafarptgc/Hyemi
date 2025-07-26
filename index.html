@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>100 Days with Hyemi</title>
   <style>
     body {
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: url('https://i.imgur.com/dCvYiWB.jpg') no-repeat center center fixed;
+      background: url('https://raw.githubusercontent.com/jaafarptgc/Hyemi/main/IMG_1798.jpg
+') no-repeat center center fixed;
       background-size: cover;
       color: white;
       text-align: center;
-      padding: 50px;
       margin: 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
+      min-height: 100vh;
     }
 
     .container {
@@ -25,49 +26,71 @@
       border-radius: 20px;
       padding: 30px;
       max-width: 600px;
-      margin: auto;
+      margin: 20px;
     }
 
-    .btn {
-      background-color: #ff94c2;
+    .btn, .music-btn {
+      background-color: #ff90c2;
       color: white;
       border: none;
-      padding: 15px 35px;
-      border-radius: 25px;
-      font-size: 1.3rem;
+      padding: 15px 25px;
+      border-radius: 15px;
+      font-size: 1.1em;
       cursor: pointer;
+      margin-top: 20px;
       box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
       transition: background-color 0.3s ease, transform 0.2s ease;
-      margin-top: 20px;
-      user-select: none;
-      outline: none;
     }
 
-    .btn:hover {
+    .btn:hover, .music-btn:hover {
       background-color: #f76ca0;
       transform: scale(1.05);
     }
 
-    .btn:active {
+    .btn:active, .music-btn:active {
       transform: scale(0.95);
+    }
+
+    .chibi-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .chibi-container img {
+      width: 80px;
+      height: auto;
+    }
+
+    audio {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <!-- Audio and play button -->
-  <audio id="myAudio" src="https://github.com/jaafarptgc/Hyemi/blob/main/because%20I'm%20stupid_%20(feat.%20KIXO)%20(%EB%82%B4%EA%B0%80%20%EB%B0%94%EB%B3%B4%EB%9D%BC%EC%84%9C%20%EA%B7%B8%EB%9E%98_%20(feat.%20KIXO%20(%ED%82%A4%EC%A1%B0))).mp3" preload="none"></audio>
-  <button class="btn" onclick="document.getElementById('myAudio').play()">
+
+  <!-- Hidden audio element -->
+  <audio id="myAudio" src="https://raw.githubusercontent.com/jaafarptgc/Hyemi/main/because%20I'm%20stupid_%20(feat.%20KIXO)%20(%EB%82%B4%EA%B0%80%20%EB%B0%94%EB%B3%B4%EB%9D%BC%EC%84%9C%20%EA%B7%B8%EB%9E%98_%20(feat.%20KIXO%20(%ED%82%A4%EC%A1%B0))).mp3
+" preload="none"></audio>
+
+  <!-- Music button -->
+  <button class="music-btn" onclick="document.getElementById('myAudio').play()">
     ▶️ Hyemi And Jafar Song
   </button>
 
-  <!-- Letter container -->
+  <!-- Main content box -->
   <div class="container">
     <h1>💖 100 Days with Hyemi 💖</h1>
     <p>Click the button below to read the letter...</p>
-    <button class="btn" onclick="window.location.href='letter.html'">
-      Read Letter
-    </button>
+
+    <div class="chibi-container">
+      <img src="https://github.com/jaafarptgc/Hyemi/blob/main/click.jpg
+" alt="Chibi" />
+      <button class="btn" onclick="window.location.href='letter.html'">Read Letter</button>
+    </div>
   </div>
+
 </body>
 </html>
-
