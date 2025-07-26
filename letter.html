@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-      background: url('https://raw.githubusercontent.com/jaafarptgc/Hyemi/main/bgbg.jpg') no-repeat center center fixed;
+      background: url('https://raw.githubusercontent.com/jaafarptgc/Hyemi/main/lucy%20and%20david.jpg') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       justify-content: center;
@@ -25,9 +25,9 @@
       padding: 40px 24px;
       overflow-y: auto;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-      background-color: rgba(255, 255, 255, 0.8); /* clearer background for readability */
+      background-color: rgba(255, 255, 255, 0.4); /* transparent for background */
       border-radius: 20px;
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(4px);
     }
 
     h1 {
@@ -66,7 +66,7 @@
 </head>
 <body>
 
-  <audio autoplay loop>
+  <audio id="bg-music" loop>
     <source src="https://raw.githubusercontent.com/jaafarptgc/Hyemi/main/SPOILER_Take3.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
@@ -95,6 +95,15 @@ This is just the beginning of our story. There’s still so much left to explore
 I love you, my favorite SongSong. ♥️
     </p>
   </div>
+
+  <script>
+    document.addEventListener('click', () => {
+      const audio = document.getElementById('bg-music');
+      if (audio.paused) {
+        audio.play().catch(() => {});
+      }
+    });
+  </script>
 
 </body>
 </html>
