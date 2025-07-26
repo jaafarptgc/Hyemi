@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>100 Days with Hyemi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: url('https://raw.githubusercontent.com/jaafarptgc/Hyemi/main/IMG_1798.jpg
-') no-repeat center center fixed;
+      font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+      background: url('https://raw.githubusercontent.com/jaafarptgc/Hyemi/main/IMG_1798.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
       text-align: center;
@@ -27,6 +27,17 @@
       padding: 30px;
       max-width: 600px;
       margin: 20px;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.6);
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
     }
 
     .btn, .music-btn {
@@ -37,7 +48,6 @@
       border-radius: 15px;
       font-size: 1.1em;
       cursor: pointer;
-      margin-top: 20px;
       box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
@@ -57,11 +67,14 @@
       align-items: center;
       gap: 15px;
       margin-top: 20px;
+      flex-wrap: wrap;
     }
 
     .chibi-container img {
       width: 80px;
       height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
     }
 
     audio {
@@ -71,24 +84,20 @@
 </head>
 <body>
 
-  <!-- Hidden audio element -->
-  <audio id="myAudio" src="https://raw.githubusercontent.com/jaafarptgc/Hyemi/main/because%20I'm%20stupid_%20(feat.%20KIXO)%20(%EB%82%B4%EA%B0%80%20%EB%B0%94%EB%B3%B4%EB%9D%BC%EC%84%9C%20%EA%B7%B8%EB%9E%98_%20(feat.%20KIXO%20(%ED%82%A4%EC%A1%B0))).mp3
-" preload="none"></audio>
+  <!-- Hidden audio -->
+  <audio id="myAudio" src="https://raw.githubusercontent.com/jaafarptgc/Hyemi/main/because%20I'm%20stupid_%20(feat.%20KIXO)%20(%EB%82%B4%EA%B0%80%20%EB%B0%94%EB%B3%B4%EB%9D%BC%EC%84%9C%20%EA%B7%B8%EB%9E%98_%20(feat.%20KIXO%20(%ED%82%A4%EC%A1%B0))).mp3" preload="none"></audio>
 
-  <!-- Music button -->
-  <button class="music-btn" onclick="document.getElementById('myAudio').play()">
-    ▶️ Hyemi And Jafar Song
-  </button>
+  <!-- Play song button -->
+  <button class="music-btn" onclick="document.getElementById('myAudio').play()">🎶 Hyemi & Jafar Song</button>
 
-  <!-- Main content box -->
+  <!-- Content box -->
   <div class="container">
     <h1>💖 100 Days with Hyemi 💖</h1>
     <p>Click the button below to read the letter...</p>
 
     <div class="chibi-container">
-      <img src="https://github.com/jaafarptgc/Hyemi/blob/main/click.jpg
-" alt="Chibi" />
-      <button class="btn" onclick="window.location.href='letter.html'">Read Letter</button>
+      <img src="https://raw.githubusercontent.com/jaafarptgc/Hyemi/main/click.jpg" alt="Chibi" />
+      <button class="btn" onclick="window.location.href='letter.html'">💌 Read Letter</button>
     </div>
   </div>
 
