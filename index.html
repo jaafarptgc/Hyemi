@@ -2,18 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>100 Days with Hyemi</title>
   <style>
     body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       background: url('https://i.imgur.com/dCvYiWB.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
-      font-family: 'Comic Sans MS', cursive;
       text-align: center;
       padding: 50px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
-   
+
     .container {
       background: rgba(0, 0, 0, 0.6);
       border-radius: 20px;
@@ -21,29 +27,47 @@
       max-width: 600px;
       margin: auto;
     }
+
     .btn {
-      background-color: #ff90c2;
+      background-color: #ff94c2;
       color: white;
       border: none;
-      padding: 15px 25px;
-      border-radius: 10px;
-      font-size: 1em;
+      padding: 15px 35px;
+      border-radius: 25px;
+      font-size: 1.3rem;
       cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+      transition: background-color 0.3s ease, transform 0.2s ease;
       margin-top: 20px;
+      user-select: none;
+      outline: none;
+    }
+
+    .btn:hover {
+      background-color: #f76ca0;
+      transform: scale(1.05);
+    }
+
+    .btn:active {
+      transform: scale(0.95);
     }
   </style>
 </head>
 <body>
-  <audio id="bgm" src="https://drive.google.com/file/d/1kxSqvVzGzvs8aYuXXtsl55WCdg4zxYvb/view?usp=drive_link"></audio>
+  <!-- Audio and play button -->
+  <audio id="myAudio" src="https://drive.google.com/uc?export=download&id=1kxSqvVzGzvs8aYuXXtsl55WCdg4zxYvb" preload="none"></audio>
+  <button class="btn" onclick="document.getElementById('myAudio').play()">
+    ▶️ Hyemi And Jafar Song
+  </button>
 
-<button onclick="document.getElementById('bgm').play()">
-  ▶️ Play Song
-</button>
-
+  <!-- Letter container -->
   <div class="container">
     <h1>💖 100 Days with Hyemi 💖</h1>
     <p>Click the button below to read the letter...</p>
-    <button class="btn" onclick="window.location.href='letter.html'">Read Letter</button>
+    <button class="btn" onclick="window.location.href='letter.html'">
+      Read Letter
+    </button>
   </div>
 </body>
 </html>
+
